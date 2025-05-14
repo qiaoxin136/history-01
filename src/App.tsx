@@ -127,7 +127,7 @@ function App() {
 
   const [date, setDate] = useState("");
   const [time, setTime]=useState("");
-  const [track, setTrack] = useState<string>("");
+  const [track, setTrack] = useState<number>();
   const [type, setType] = useState<string>("water");
   const [status, setStatus]=useState<string>("start");
   const [lat, setLat] = useState(0);
@@ -368,7 +368,7 @@ function App() {
   };
 
   const handleTrack = (e: ChangeEvent<HTMLInputElement>) => {
-    setTrack(e.target.value);
+   setTrack(parseInt(e.target.value));
   };
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
