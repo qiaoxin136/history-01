@@ -90,6 +90,7 @@ type DataT = {
   };
   properties: {
     type: string;
+    status: string;
     date: string;
     time: string;
     id: string;
