@@ -432,6 +432,7 @@ function App() {
           html: `<u>History</u> <br>
           <div>Date: ${d.properties.date}</div>
           <div>Time: ${d.properties.time}</div>
+          <div>track: ${d.properties.track}</div>
         <div>Type: ${d.properties.type}</div>`,
           style: {
             backgroundColor: "#AFE1AF",
@@ -505,6 +506,7 @@ function App() {
       return {
         html: `<div>${d.properties.date}</div></br>
           <div>${d.properties.time}</div></br>
+          <div>${d.properties.track}</div></br>
          <div>${d.properties.type}</div></br>`,
         style: {
           backgroundColor: "#AFE1AF",
@@ -640,6 +642,8 @@ function App() {
                       onClose={() => setShowPopup(false)}
                     >
                       {clickInfo.properties.date} <br />
+                      {clickInfo.properties.track} <br />
+                      {clickInfo.properties.type} <br />
                       <Button
                         onClick={() => {
                           deleteTodo(clickInfo.properties.id);
